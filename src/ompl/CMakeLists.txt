@@ -65,6 +65,7 @@ target_link_libraries(ompl
 
 if(MSVC)
   set_target_properties(ompl PROPERTIES VERSION "${OMPL_VERSION}" STATIC_LIBRARY_FLAGS "psapi.lib ws2_32.lib")
+  set_target_properties(ompl PROPERTIES DEBUG_OUTPUT_NAME "ompld" RELEASE_OUTPUT_NAME "ompl")
 else(MSVC)
   if (MINGW)
     target_link_libraries(ompl psapi ws2_32)
