@@ -42,8 +42,9 @@ include_directories("${OMPL_INCLUDE_DIR}")
 
 
 if(MSVC)
-    add_definitions(-DBOOST_ALL_NO_LIB)
-    add_definitions(-DBOOST_PROGRAM_OPTIONS_DYN_LINK)
+    #add_definitions(-DBOOST_ALL_NO_LIB)
+    #add_definitions(-DBOOST_PROGRAM_OPTIONS_DYN_LINK)
+	add_definitions(-DBOOST_ALL_DYN_LINK)
 endif(MSVC)
 if(IS_ICPC)
     set(Boost_USE_STATIC_LIBS ON CACHE STRING "Use statically linked Boost libraries")
